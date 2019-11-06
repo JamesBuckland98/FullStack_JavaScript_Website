@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App correctly 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+       
+      Sappo
+    </h1>
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.jpg"
+    />
+    <Login
+      setUsername={[Function]}
+      switch={[Function]}
+    />
+  </header>
+</div>
+`;

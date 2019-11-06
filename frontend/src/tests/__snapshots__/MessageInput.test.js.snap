@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Message input component correctly 1`] = `
+<Geolocated(MessageInput)
+  coords={
+    Object {
+      "latitude": 50,
+      "longitude": 20,
+    }
+  }
+  isGeolocationAvailable={true}
+  isGeolocationEnabled={true}
+  positionError={null}
+/>
+`;

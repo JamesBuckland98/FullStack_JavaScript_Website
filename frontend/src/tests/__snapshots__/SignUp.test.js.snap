@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Sign up component correctly 1`] = `
+<div>
+  <p>
+     
+     
+  </p>
+  <h3>
+     Sign up: 
+  </h3>
+  <Formik
+    initialValues={
+      Object {
+        "password": "",
+        "username": "",
+      }
+    }
+    onSubmit={[Function]}
+    validate={[Function]}
+  >
+    <Component />
+  </Formik>
+  <button
+    className="link"
+    onClick={[Function]}
+  >
+    Login
+  </button>
+</div>
+`;
