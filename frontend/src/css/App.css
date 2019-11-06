@@ -27,6 +27,7 @@ ul {
   background-color: white;
   color: black;
   border: 2px solid #09D3AC;
+  border-bottom: none;
 }
 
 form {
