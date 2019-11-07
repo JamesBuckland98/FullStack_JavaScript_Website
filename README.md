@@ -6,6 +6,15 @@ get all the modules
 the front endand back end directory and fire their start scripts
 3. Goto [http://localhost:3000/](http://localhost:3000/) once the server has started running.(Please note that you have to be connected to eduroam or the vpn in order to connect to the cardiff uni database server).
 
+## Running Tests
+### Frontend
+1. cd into frontend directory
+2. npm test
+
+### Backend
+1. cd into backend directory
+2. npm test
+
 ## Assumptions Made
 * Users don't know the tempurature of the location they're at. In order to deal with this I have linked the project up to Open Weather API to get the temperature base on latituade and longitude.
 * Users don't know the exact location of their position. In order to deal with this I have used reat-geolocated library to get their latitude and longitude base on their devices location.
