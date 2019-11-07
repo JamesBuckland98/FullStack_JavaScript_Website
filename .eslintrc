@@ -4,8 +4,19 @@
         "browser": true,
         "node": true
     },
-    "extends": "airbnb",
+    "extends": "eslint:recommended",
     "rules": {
-        "indent": [4, "tab"]
+        "max-len": [1,1200,2,{"ignoreComments": true}],
+        "no-console":[1],
+        "no-unused-vars":[1],
+        "no-loop-func":[1],
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ]
     }
 }

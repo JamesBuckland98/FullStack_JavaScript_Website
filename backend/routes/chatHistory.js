@@ -6,22 +6,20 @@ router.post('/', function(req, res, next) {
 	result = Object.values(req.body);
 	req.app.locals.db.query(query, result, (err, result, fields) => {
 		if (err) {
-		  next(err);
+			next(err);
 		}
 		res.send('success');
-		// get inserted rows
-		console.log('Row inserted:' + result.affectedRows);
-	  });
+	});
 })
 
-router.get('/', function(req,res,next) {
+router.get('/', function(req, res, next) {
 	let query = 'SELECT * FROM ChatHistory'
 	req.app.locals.db.query(query, (err, result) => {
 		if (err) {
-		  throw err;
+			next(err);
 		}
 		res.send(result);
-	  });
+	});
 
 })
 

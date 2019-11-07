@@ -7,12 +7,9 @@ router.post('/', function(req, res, next) {
 	req.app.locals.db.query(query, result, (err, result) => {
 		if (err) {
 			next(err);
-			return console.error(err.message);
 		} else {
 			res.send(result)
 		}
-		// get inserted rows
-		console.log('Row inserted:' + result.affectedRows);
 	})
 })
 

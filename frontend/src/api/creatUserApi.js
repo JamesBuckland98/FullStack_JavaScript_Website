@@ -7,15 +7,15 @@ import axios from 'axios'
  */
 function createUser(values, callback) {
 	axios.post(process.env.REACT_APP_SIGN_UP_ENDPOINT, {
-			Username : values.username, // Needs to be unique 
-			UserPassword: values.password,
-		}).then((response) => {
-			// User doesn't exist
-			callback(null, true)
-		}).catch(() => {
-			// User already exist
-			callback(null, false)
-		})
+		Username : values.username, // Needs to be unique 
+		UserPassword: values.password,
+	}).then((response) => {
+		// User doesn't exist
+		callback(null, true)
+	}).catch(() => {
+		// User already exist
+		callback(null, false)
+	})
 }
 
 export default createUser

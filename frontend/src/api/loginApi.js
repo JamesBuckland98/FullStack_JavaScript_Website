@@ -8,9 +8,9 @@ import axios from 'axios'
  */
 function checkLoginDetails(values,callback) {
 	axios.post(process.env.REACT_APP_LOGIN_ENDPOINT , {
-			Username : values.username,
-			UserPassword : values.password,
-		})
+		Username : values.username,
+		UserPassword : values.password,
+	})
 		.then((response) => {
 			callback(null, response.data[0]);
 		}).catch((error) => {

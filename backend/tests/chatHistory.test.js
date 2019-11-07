@@ -7,7 +7,7 @@ describe('test for chat functionality',() => {
 	it('gets the chat history endpoint', async (done) => {
 		const response = await request.get('/chatHistory')
 		expect(response.status).toBe(200)
-		expect(typeof response.body).toBe("object")
+		expect(typeof response.body).toBe('object')
 		done();
 	})
 

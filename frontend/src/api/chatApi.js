@@ -19,9 +19,9 @@ function sendMessage(msg) {
  */
 function getChatHistory(callback) {
 	axios.get(process.env.REACT_APP_CHAT_HISTORY_ENDPOINT)
-	.then(function(response){
-		callback(null, response.data)
-	})
+		.then(function(response){
+			callback(null, response.data)
+		})
 }
 
 /**

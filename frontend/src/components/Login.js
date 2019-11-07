@@ -8,7 +8,7 @@ class Login extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			responseText: ''
+			responseText: '',
 		}
 	}
 	render() {
@@ -17,20 +17,20 @@ class Login extends Component {
 				<p> { this.state.responseText } </p>
 				<h3> Login: </h3>
 				<Formik
-						initialValues={{ username : '', password: '' }}
-						validate= {
-							values => {
-								let errors = {};
-								if (!values.username) {
-									errors.username = 'Required';
-								}
-								if (!values.password) {
-									errors.password = 'Required';
-								}
-								return errors;
+					initialValues={{ username : '', password: '' }}
+					validate= {
+						values => {
+							let errors = {};
+							if (!values.username) {
+								errors.username = 'Required';
 							}
+							if (!values.password) {
+								errors.password = 'Required';
+							}
+							return errors;
 						}
-						onSubmit={(values, { setSubmitting }) => {
+					}
+					onSubmit={(values, { setSubmitting }) => {
 						setTimeout(() => {
 							login(values, (err, data) => {
 								if (data instanceof Object) {
@@ -45,29 +45,29 @@ class Login extends Component {
 							});
 							setSubmitting(false);
 						}, 400);
-						}}
-					>
-						{({ isSubmitting }) => (
-							<Form>
-								<label> Username: </label> <br/>
-								<Field type="text" name="username" />
-								<ErrorMessage name="username" component="div" />
-								<br/>
-								<label> Password: </label> <br/>
-								<Field type="password" name="password" />
-								<ErrorMessage name="password" component="div" />
-								<br/>
-								<button type="submit" disabled={isSubmitting}>
+					}}
+				>
+					{({ isSubmitting }) => (
+						<Form>
+							<label> Username: </label> <br/>
+							<Field type='text' name='username' />
+							<ErrorMessage name='username' component='div' />
+							<br/>
+							<label> Password: </label> <br/>
+							<Field type='password' name='password' />
+							<ErrorMessage name='password' component='div' />
+							<br/>
+							<button type='submit' disabled={isSubmitting}>
 								Submit
-								</button>
-							</Form>
-						)}
+							</button>
+						</Form>
+					)}
 				</Formik>
-				<button className="link" onClick= {() => {
+				<button className='link' onClick= {() => {
 					this.props.switch('login'); 
 					this.props.switch('sign up');
 				}}>
-					 Sign Up
+					Sign Up
 				</button>
 			</div>
 		)

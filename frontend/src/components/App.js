@@ -58,56 +58,56 @@ class App extends Component {
 	 */
 	switchBetweenComponents(component) {
 		switch (component) {
-			case 'login':
-				this.setState(prevState => ({
-					islogin: !prevState.islogin,
-				}));
-				break;
-			case 'sign up':
-				this.setState(prevState => ({
-					isSignUp: !prevState.isSignUp
-				}));
-				break;
-			case 'chat':
-				this.setState(prevState => ({
-					isChat : !prevState.isChat
-				}));
-				break;
-			default:
-				break;
+		case 'login':
+			this.setState(prevState => ({
+				islogin: !prevState.islogin,
+			}));
+			break;
+		case 'sign up':
+			this.setState(prevState => ({
+				isSignUp: !prevState.isSignUp
+			}));
+			break;
+		case 'chat':
+			this.setState(prevState => ({
+				isChat : !prevState.isChat
+			}));
+			break;
+		default:
+			break;
 		}
 	}
 
 	render() {
 		return (
-			<div className="App">
-				<header className="App-header">
+			<div className='App'>
+				<header className='App-header'>
 					<h1> { process.env.REACT_APP_COMPANY_TITLE }</h1>
-					<img src={logo} className="App-logo" alt="logo" />
+					<img src={logo} className='App-logo' alt='logo' />
 					{ 
 						this.state.islogin ?
-						<Login
-							setUsername = { this.setUsername }
-							switch = { this.switchBetweenComponents }
-						/> :
-						null
+							<Login
+								setUsername = { this.setUsername }
+								switch = { this.switchBetweenComponents }
+							/> :
+							null
 					}
 					{ 
 						this.state.isSignUp ?
-						<SignUp
-							switch = { this.switchBetweenComponents }
-						/> :
-						null
+							<SignUp
+								switch = { this.switchBetweenComponents }
+							/> :
+							null
 					}
 					{ 
 						this.state.isChat ?
-						<MessageInput
-							emitMessage = { this.emitMessage } 
-							username = { this.state.username } 
-							newMessage = { this.state.newMessage }
-							messages = { this.state.messages }
-						/> :
-						null
+							<MessageInput
+								emitMessage = { this.emitMessage } 
+								username = { this.state.username } 
+								newMessage = { this.state.newMessage }
+								messages = { this.state.messages }
+							/> :
+							null
 					}
 				</header>
 			</div>

@@ -88,12 +88,6 @@ class MessageInput extends Component {
 						<ErrorMessage name="Species" component="div" /> 
 						<Field type= "number" name="Abundance" placeholder="Enter Abundance"/>
 						<ErrorMessage name="Abundance" component="div" /> 
-						<input id="file" name="file" type="file" onChange={
-							(event) => {
-								setFieldValue("file", event.currentTarget.files[0]);
-							}
-						} className="form-control" />
-						<ErrorMessage name="file" component="div" />
 						<button type="submit" disabled={isSubmitting}>
 						Submit
 						</button>
